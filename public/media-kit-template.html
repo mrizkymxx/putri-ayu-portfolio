@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Kit - Putri Ayu Kusuma Dewi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      background: #FFFFFF;
+      color: #3B2A2E;
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.35;
+      font-size: 9.5px;
+      overflow: hidden;
+    }
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      padding: 10mm 12mm 9mm 12mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #FFFFFF;
+    }
+
+    /* Masthead Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #F3CBD3;
+      margin-bottom: 8px;
+    }
+    .header-left h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #3B2A2E;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .header-left .tagline {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #B5646F;
+      margin-top: 1px;
+    }
+    .header-left .subinfo {
+      font-size: 9px;
+      color: #968187;
+      margin-top: 1px;
+    }
+    .header-right {
+      text-align: right;
+      font-size: 9px;
+      color: #6B555B;
+      line-height: 1.5;
+    }
+    .header-right strong {
+      color: #3B2A2E;
+    }
+
+    /* 4 Stats Tiles */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 9px;
+    }
+    .stat-card {
+      background: #FFF8F9;
+      border: 1px solid #ECC7CE;
+      border-radius: 8px;
+      padding: 8px 6px;
+      text-align: center;
+    }
+    .stat-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #B5646F;
+      line-height: 1.1;
+    }
+    .stat-name {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #3B2A2E;
+      margin-top: 2px;
+    }
+    .stat-sub {
+      font-size: 7.5px;
+      color: #968187;
+    }
+
+    /* Main 2-Column Grid */
+    .body-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 12px;
+      flex: 1;
+      margin-bottom: 8px;
+    }
+
+    .sec-head {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #3B2A2E;
+      margin-bottom: 5px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #F3CBD3;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .sec-head span {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      color: #B5646F;
+    }
+
+    /* Profile Card with Photo */
+    .profile-card {
+      display: flex;
+      gap: 10px;
+      background: #FFF9FA;
+      border: 1px solid #F3CBD3;
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 7px;
+      align-items: center;
+    }
+    .profile-img-wrap {
+      width: 72px;
+      height: 90px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid #ECC7CE;
+      background: #F9E4E8;
+    }
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .profile-info {
+      font-size: 8.5px;
+      color: #5C5554;
+      line-height: 1.4;
+    }
+    .profile-info strong {
+      color: #3B2A2E;
+      font-size: 9px;
+    }
+
+    /* Demographics */
+    .demo-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+      font-size: 8.5px;
+    }
+    .bar-bg {
+      flex: 1;
+      height: 5px;
+      background: #F9E4E8;
+      border-radius: 3px;
+      margin: 0 8px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: #B5646F;
+      border-radius: 3px;
+    }
+
+    /* Case Studies 3 Items */
+    .case-mini-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-top: 5px;
+    }
+    .case-mini-box {
+      background: #FFFFFF;
+      border: 1px solid #ECC7CE;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .case-mini-img {
+      width: 100%;
+      height: 56px;
+      overflow: hidden;
+      background: #F9E4E8;
+    }
+    .case-mini-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .case-mini-body {
+      padding: 4px 6px;
+    }
+    .case-mini-name {
+      font-weight: 700;
+      font-size: 8.5px;
+      color: #3B2A2E;
+    }
+    .case-mini-stat {
+      font-size: 8px;
+      font-weight: 700;
+      color: #B5646F;
+      margin-top: 1px;
+    }
+
+    /* Packages */
+    .pkg-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .pkg-item {
+      background: #FFFFFF;
+      border: 1px solid #ECC7CE;
+      border-radius: 6px;
+      padding: 7px 9px;
+    }
+    .pkg-item.popular {
+      border: 1.5px solid #B5646F;
+      background: #FFFDFE;
+    }
+    .pkg-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+    .pkg-name {
+      font-weight: 700;
+      font-size: 9.5px;
+      color: #3B2A2E;
+    }
+    .pkg-badge {
+      font-size: 7px;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: #B5646F;
+      padding: 1px 5px;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+    .pkg-list {
+      list-style: none;
+      font-size: 8.2px;
+      color: #5C5554;
+      line-height: 1.4;
+    }
+    .pkg-list li::before {
+      content: '✓ ';
+      color: #B5646F;
+      font-weight: bold;
+    }
+
+    /* Addons */
+    .addons-line {
+      font-size: 7.5px;
+      color: #813B44;
+      background: #FFF8F9;
+      padding: 4px 8px;
+      border-radius: 5px;
+      border: 1px solid #ECC7CE;
+      margin-top: 5px;
+      line-height: 1.35;
+    }
+
+    /* SOP Steps 5 Columns */
+    .sop-line {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .sop-mini-box {
+      background: #FFF8F9;
+      border: 1px solid #ECC7CE;
+      border-radius: 5px;
+      padding: 4px 2px;
+    }
+    .sop-mini-num {
+      font-size: 7px;
+      font-weight: 700;
+      color: #B5646F;
+      text-transform: uppercase;
+    }
+    .sop-mini-title {
+      font-size: 8px;
+      font-weight: 700;
+      color: #3B2A2E;
+      margin: 1px 0;
+    }
+    .sop-mini-time {
+      font-size: 7px;
+      color: #968187;
+    }
+
+    /* Logos Row */
+    .brand-logos-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      align-items: center;
+      padding: 5px 6px;
+      background: #FFF9FA;
+      border-radius: 6px;
+      border: 1px solid #ECC7CE;
+      margin-bottom: 6px;
+    }
+    .brand-logo-cell {
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brand-logo-cell img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    /* Bottom Booking Banner */
+    .cta-strip {
+      background: #B5646F;
+      color: #FFFFFF;
+      border-radius: 7px;
+      padding: 9px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cta-strip h3 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+    .cta-strip p {
+      font-size: 8px;
+      opacity: 0.95;
+      margin-top: 1px;
+    }
+    .cta-strip-right {
+      text-align: right;
+      font-size: 9px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+    .cta-strip-right strong {
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sheet">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <h1>Putri Ayu Kusuma Dewi</h1>
+        <div class="tagline">Content Creator Review Produk Perawatan & Kebutuhan Keluarga</div>
+        <div class="subinfo">Berbasis di Jepara, Jawa Tengah • S1 Akuntansi</div>
+      </div>
+      <div class="header-right">
+        <div>TikTok: <strong>@arsyi_1907</strong></div>
+        <div>Instagram: <strong>@_purtiayu</strong></div>
+        <div>WhatsApp: <strong>+62 882-2546-0100</strong></div>
+        <div>Email: <strong>cantikputrio58@gmail.com</strong></div>
+      </div>
+    </div>
+
+    <!-- 4 Stats Tiles -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-val">3.5K+</div>
+        <div class="stat-name">Total Followers</div>
+        <div class="stat-sub">TikTok & Instagram</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">2.5K+</div>
+        <div class="stat-name">Avg. Views / Video</div>
+        <div class="stat-sub">Performa Organik 30 Hari</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">5.2%</div>
+        <div class="stat-name">Engagement Rate</div>
+        <div class="stat-sub">13.4K+ Likes Akumulatif</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">60+</div>
+        <div class="stat-name">Brand Partners</div>
+        <div class="stat-sub">Kampanye Terverifikasi</div>
+      </div>
+    </div>
+
+    <!-- Main 2-Column Content -->
+    <div class="body-grid">
+      <!-- Left Column -->
+      <div>
+        <div class="sec-head">
+          Profil & Nilai Tambah
+          <span>S1 Akuntansi</span>
+        </div>
+        <div class="profile-card">
+          <div class="profile-img-wrap">
+            <img src="putri-profile.jpg" alt="Putri Ayu">
+          </div>
+          <div class="profile-info">
+            <strong>Disiplin Brief & SLA:</strong> Memadukan persona ulasan keluarga yang natural dengan disiplin akuntansi: draft video diserahkan H-2, kepatuhan brief presisi, dan laporan analitik transparan H+7.
+            <div style="margin-top: 3px; font-weight: 700; color: #813B44;">
+              Niche: Skincare • Ibu & Bayi • Herbal • Home Living
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-head" style="margin-top: 5px;">
+          Demografi Audiens
+          <span>TikTok & IG Analytics</span>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <div class="demo-bar">
+            <span>Wanita</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 82%;"></div></div>
+            <strong>82%</strong>
+          </div>
+          <div class="demo-bar">
+            <span>Pria</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 18%; background: #E8CCD2;"></div></div>
+            <strong>18%</strong>
+          </div>
+        </div>
+        <div style="font-size: 8px; color: #6B555B; line-height: 1.4;">
+          • <strong>Usia:</strong> 25-34 th (48%), 18-24 th (28%), 35-44 th (18%), 45+ (6%)<br>
+          • <strong>Kota:</strong> Jakarta (24%), Surabaya (18%), Semarang (15%), Jepara (12%)
+        </div>
+
+        <div class="sec-head" style="margin-top: 6px;">
+          Bukti Performa Video (Case Studies)
+        </div>
+        <div class="case-mini-row">
+          <div class="case-mini-box">
+            <div class="case-mini-img"><img src="thumbnails/garnier-peeling.jpg" alt="Garnier"></div>
+            <div class="case-mini-body">
+              <div class="case-mini-name">Garnier Serum</div>
+              <div class="case-mini-stat">14.6K Views • 780 Saves</div>
+            </div>
+          </div>
+          <div class="case-mini-box">
+            <div class="case-mini-img"><img src="thumbnails/socks-baby.jpg" alt="Kaos Kaki"></div>
+            <div class="case-mini-body">
+              <div class="case-mini-name">Kaos Kaki Bayi</div>
+              <div class="case-mini-stat">16.7K Views • 1.4K Saves</div>
+            </div>
+          </div>
+          <div class="case-mini-box">
+            <div class="case-mini-img"><img src="thumbnails/toy-baby.jpg" alt="Mainan"></div>
+            <div class="case-mini-body">
+              <div class="case-mini-name">Mainan Edukasi</div>
+              <div class="case-mini-stat">3.9K Views • 240 Saves</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <div class="sec-head">
+          Pilihan Paket Kolaborasi
+          <span>Rate Card Resmi</span>
+        </div>
+        <div class="pkg-row">
+          <div class="pkg-item">
+            <div class="pkg-top">
+              <div class="pkg-name">Starter Awareness</div>
+              <span style="font-size: 7.5px; color: #813B44; font-weight: 700;">Uji Pasar / SKU Baru</span>
+            </div>
+            <ul class="pkg-list">
+              <li>1x Video Vertikal (TikTok / Reels, 9:16, 1080p)</li>
+              <li>3x Instagram Story berangkai + link stiker langsung</li>
+              <li>1x Sesi revisi minor & laporan performa H+7</li>
+            </ul>
+          </div>
+
+          <div class="pkg-item popular">
+            <div class="pkg-top">
+              <div class="pkg-name">Growth & Edukasi</div>
+              <div class="pkg-badge">Paling Populer</div>
+            </div>
+            <ul class="pkg-list">
+              <li>3x Video Vertikal (TikTok & Reels, angle berbeda)</li>
+              <li>6x Instagram Story interaktif (Q&A/Polling/Stiker link)</li>
+              <li>Pinned Comment link pembelian selama 30 hari di video utama</li>
+              <li>2x Sesi revisi draft materi & laporan lengkap H+7</li>
+            </ul>
+          </div>
+
+          <div class="pkg-item">
+            <div class="pkg-top">
+              <div class="pkg-name">Long-term Retainer</div>
+              <span style="font-size: 7.5px; color: #813B44; font-weight: 700;">Kuartalan / Ambassador</span>
+            </div>
+            <ul class="pkg-list">
+              <li>4x Video Vertikal + 8x Stories terjadwal per bulan</li>
+              <li>3 Bulan hak guna iklan (Paid Ads / Spark Ads Code)</li>
+              <li>Eksklusivitas kategori langsung & slot jadwal prioritas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="addons-line">
+          <strong>Add-On:</strong> TikTok Spark Ads Code • Paid Ads Rights (30/60/90 hari) • Raw Footage 4K • Fast Track (&lt; 48 Jam)
+        </div>
+
+        <div class="sec-head" style="margin-top: 6px;">
+          Standar Alur Kerja (SOP 5 Tahap)
+        </div>
+        <div class="sop-line">
+          <div class="sop-mini-box">
+            <div class="sop-mini-num">Step 1</div>
+            <div class="sop-mini-title">Brief</div>
+            <div class="sop-mini-time">H-1</div>
+          </div>
+          <div class="sop-mini-box">
+            <div class="sop-mini-num">Step 2</div>
+            <div class="sop-mini-title">Konsep</div>
+            <div class="sop-mini-time">H-2</div>
+          </div>
+          <div class="sop-mini-box">
+            <div class="sop-mini-num">Step 3</div>
+            <div class="sop-mini-title">Produksi</div>
+            <div class="sop-mini-time">H 3-5</div>
+          </div>
+          <div class="sop-mini-box">
+            <div class="sop-mini-num">Step 4</div>
+            <div class="sop-mini-title">Revisi (2x)</div>
+            <div class="sop-mini-time">H-6</div>
+          </div>
+          <div class="sop-mini-box">
+            <div class="sop-mini-num">Step 5</div>
+            <div class="sop-mini-title">Tayang</div>
+            <div class="sop-mini-time">H-7+</div>
+          </div>
+        </div>
+
+        <div class="sec-head" style="margin-top: 4px;">
+          Brand Partner Terpilih
+        </div>
+        <div class="brand-logos-row">
+          <div class="brand-logo-cell"><img src="logos/garnier.svg" alt="Garnier"></div>
+          <div class="brand-logo-cell"><img src="logos/vaseline.svg" alt="Vaseline"></div>
+          <div class="brand-logo-cell"><img src="logos/sidomuncul.svg" alt="Sido Muncul"></div>
+          <div class="brand-logo-cell"><img src="logos/hanasui.png" alt="Hanasui"></div>
+          <div class="brand-logo-cell"><img src="logos/motherlove.png" alt="Motherlove"></div>
+          <div class="brand-logo-cell"><img src="logos/you.png" alt="Y.O.U"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Strip at Bottom -->
+    <div class="cta-strip">
+      <div>
+        <h3>Mulai Kolaborasi Kampanye</h3>
+        <p>Hubungi WhatsApp langsung untuk ketersediaan slot tanggal rilis & penawaran resmi.</p>
+      </div>
+      <div class="cta-strip-right">
+        <div>WhatsApp: <strong>+62 882-2546-0100</strong></div>
+        <div>Email: <strong>cantikputrio58@gmail.com</strong></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

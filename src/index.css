@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blush-50: #FFF6F8;
+  --color-blush-100: #F9E4E8;
+  --color-blush-200: #F3CBD3;
+  --color-mauve-50: #FCF4F5;
+  --color-mauve-100: #F7E5E8;
+  --color-mauve-200: #ECC7CE;
+  --color-mauve-300: #DC9FA9;
+  --color-mauve-400: #CB7B87;
+  --color-mauve-500: #B5646F;
+  --color-mauve-600: #9E4D58;
+  --color-mauve-700: #813B44;
+  --color-brand-brown: #3B2A2E;
+  --color-brand-muted: #6B555B;
+  --color-brand-subtle: #968187;
+  --color-gold-500: #C9A66B;
+  --color-gold-600: #B38E54;
+  --color-gold-100: #F7EFE1;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-brand-brown);
+    background-color: #FDF9FA;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-brand-brown);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F9E4E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CB7B87;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5646F;
+}
+
+/* Hide scrollbar for horizontal chip navigation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Infinite Seamless Marquee - Zero Stutter & Hardware Accelerated */
+@keyframes marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.marquee-group {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-track-left {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  animation: marquee-left 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  animation: marquee-right 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-group:hover .marquee-track-left,
+.marquee-group:hover .marquee-track-right {
+  animation-play-state: paused;
+}
+
+

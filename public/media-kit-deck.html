@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Kit Resmi - Putri Ayu Kusuma Dewi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #3B2A2E;
+      background: #FFFFFF;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 16mm 18mm;
+      position: relative;
+      background: #FFFFFF;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    /* Page Header */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid #F3CBD3;
+      margin-bottom: 16px;
+    }
+    .top-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #3B2A2E;
+      letter-spacing: 0.5px;
+    }
+    .top-meta {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #B5646F;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #F3CBD3;
+      font-size: 8.5px;
+      color: #968187;
+    }
+
+    /* Section Headings */
+    .section-header {
+      margin-bottom: 14px;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 8.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #B5646F;
+      background: #FFF5F7;
+      padding: 2px 8px;
+      border-radius: 10px;
+      border: 1px solid #ECC7CE;
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #3B2A2E;
+      line-height: 1.25;
+    }
+    .section-sub {
+      font-size: 10px;
+      color: #6B555B;
+      margin-top: 3px;
+    }
+
+    /* ================= PAGE 1 COVER ================= */
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .cover-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: #3B2A2E;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    .cover-tagline {
+      font-size: 12px;
+      font-weight: 600;
+      color: #B5646F;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+    .cover-cred {
+      font-size: 10px;
+      color: #813B44;
+      background: #FFF5F7;
+      border-left: 3px solid #B5646F;
+      padding: 6px 10px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      line-height: 1.45;
+    }
+    .cover-photo-wrapper {
+      position: relative;
+      text-align: center;
+    }
+    .cover-photo-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 3px solid #ECC7CE;
+      box-shadow: 0 10px 25px rgba(181, 100, 111, 0.15);
+      background: #F9E4E8;
+    }
+    .cover-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    /* Metrics Grid */
+    .metrics-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .stat-tile {
+      background: #FFF8F9;
+      border: 1px solid #ECC7CE;
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .stat-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #B5646F;
+      line-height: 1.1;
+    }
+    .stat-name {
+      font-size: 10px;
+      font-weight: 700;
+      color: #3B2A2E;
+      margin-top: 3px;
+    }
+    .stat-sub {
+      font-size: 8px;
+      color: #968187;
+      margin-top: 1px;
+    }
+
+    /* Value Pillars */
+    .pillars-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .pillar-card {
+      background: #FFFFFF;
+      border: 1px solid #ECC7CE;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .pillar-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #3B2A2E;
+      margin-bottom: 3px;
+    }
+    .pillar-desc {
+      font-size: 9px;
+      color: #6B555B;
+      line-height: 1.4;
+    }
+
+    /* ================= PAGE 2 AUDIENCE & SHOWCASE ================= */
+    .audience-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .card-box {
+      background: #FFF8F9;
+      border: 1px solid #ECC7CE;
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .card-box-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #3B2A2E;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #F3CBD3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-box-title span {
+      font-size: 8.5px;
+      font-family: 'Inter', sans-serif;
+      color: #B5646F;
+      font-weight: 700;
+    }
+    .bar-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: 9.5px;
+    }
+    .bar-line-bg {
+      flex: 1;
+      height: 6px;
+      background: #F9E4E8;
+      border-radius: 3px;
+      margin: 0 8px;
+      overflow: hidden;
+    }
+    .bar-line-fill {
+      height: 100%;
+      background: #B5646F;
+      border-radius: 3px;
+    }
+
+    /* Case Studies 3-Grid */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .case-item {
+      background: #FFFFFF;
+      border: 1px solid #ECC7CE;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .case-thumb {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: #F9E4E8;
+      overflow: hidden;
+      position: relative;
+    }
+    .case-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .case-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: rgba(0,0,0,0.7);
+      color: #FFFFFF;
+      font-size: 8px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .case-body {
+      padding: 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .case-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #3B2A2E;
+    }
+    .case-cat {
+      font-size: 8.5px;
+      color: #968187;
+      margin-bottom: 4px;
+    }
+    .case-obj {
+      font-size: 9px;
+      color: #6B555B;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .case-res {
+      background: #FFF5F7;
+      border: 1px solid #ECC7CE;
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #813B44;
+    }
+
+    /* ================= PAGE 3 PACKAGES & PARTNERS ================= */
+    .packages-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .pkg-card {
+      border: 1px solid #ECC7CE;
+      border-radius: 12px;
+      padding: 14px 12px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pkg-card.popular {
+      border: 2px solid #B5646F;
+      background: #FFFDFE;
+      position: relative;
+    }
+    .pop-badge {
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #B5646F;
+      color: #FFFFFF;
+      font-size: 7.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+    }
+    .pkg-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #3B2A2E;
+    }
+    .pkg-target {
+      font-size: 8px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #B5646F;
+      margin-bottom: 6px;
+    }
+    .pkg-desc {
+      font-size: 9px;
+      color: #6B555B;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .pkg-items {
+      list-style: none;
+      font-size: 9px;
+      color: #3B2A2E;
+      line-height: 1.45;
+    }
+    .pkg-items li {
+      margin-bottom: 4px;
+      padding-left: 12px;
+      position: relative;
+    }
+    .pkg-items li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #B5646F;
+      font-weight: 700;
+      font-size: 8.5px;
+    }
+    .rate-btn {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      background: #FFF5F7;
+      border: 1px solid #ECC7CE;
+      color: #813B44;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 6px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .pkg-card.popular .rate-btn {
+      background: #B5646F;
+      color: #FFFFFF;
+      border-color: #B5646F;
+    }
+
+    /* Add-ons 4-col */
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .addon-box {
+      background: #FFF8F9;
+      border: 1px solid #ECC7CE;
+      border-radius: 8px;
+      padding: 8px;
+    }
+    .addon-name {
+      font-size: 9px;
+      font-weight: 700;
+      color: #3B2A2E;
+    }
+    .addon-desc {
+      font-size: 8px;
+      color: #6B555B;
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    /* Logos Row */
+    .logos-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      align-items: center;
+      padding: 10px;
+      background: #FAFAFA;
+      border-radius: 10px;
+      border: 1px solid #E5E5E5;
+    }
+    .logo-cell {
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+    .logo-cell img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .logo-text-cell {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #3B2A2E;
+      text-align: center;
+    }
+
+    /* ================= PAGE 4 SOP & TESTIMONIALS ================= */
+    .sop-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .sop-card {
+      background: #FFFFFF;
+      border: 1px solid #ECC7CE;
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+    .sop-step {
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #B5646F;
+    }
+    .sop-name {
+      font-size: 10px;
+      font-weight: 700;
+      color: #3B2A2E;
+      margin: 3px 0 2px;
+    }
+    .sop-time {
+      font-size: 8px;
+      color: #968187;
+      font-weight: 600;
+    }
+    .sop-desc {
+      font-size: 8px;
+      color: #6B555B;
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    /* Testimonials 3-Grid */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .testi-card {
+      background: #FFF9FA;
+      border: 1px solid #ECC7CE;
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .testi-quote {
+      font-size: 9.5px;
+      font-style: italic;
+      color: #3B2A2E;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #F3CBD3;
+    }
+    .testi-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1.5px solid #B5646F;
+      shrink-0;
+    }
+    .testi-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .testi-name {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #3B2A2E;
+    }
+    .testi-role {
+      font-size: 8px;
+      color: #813B44;
+    }
+
+    /* CTA Card */
+    .contact-cta-box {
+      background: linear-gradient(135deg, #B5646F 0%, #813B44 100%);
+      color: #FFFFFF;
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cta-left h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .cta-left p {
+      font-size: 9.5px;
+      opacity: 0.9;
+      margin-top: 2px;
+    }
+    .cta-right {
+      text-align: right;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+    .cta-right strong {
+      color: #F7EFE1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= PAGE 1 ================= -->
+  <div class="page">
+    <div class="top-bar">
+      <div class="top-brand">PUTRI AYU KUSUMA DEWI</div>
+      <div class="top-meta">OFFICIAL MEDIA KIT 2026</div>
+    </div>
+
+    <div class="cover-grid">
+      <div>
+        <div class="cover-name">Putri Ayu<br>Kusuma Dewi</div>
+        <div class="cover-tagline">Content Creator Review Produk Perawatan & Kebutuhan Keluarga</div>
+
+        <div class="cover-cred">
+          <strong>Latar Belakang S1 Akuntansi:</strong> Terbiasa disiplin pada pemahaman brief, kepatuhan timeline produksi (draft H-2), dan pelaporan metrik performa analitik transparan H+7.
+        </div>
+
+        <div style="font-size: 10px; color: #6B555B; line-height: 1.5; margin-bottom: 12px;">
+          Berbasis di Jepara, Jawa Tengah. Berpengalaman berkolaborasi dengan 60+ produk dari brand perawatan diri, ibu & anak, herbal, dan kebutuhan rumah tangga terpercaya di seluruh Indonesia.
+        </div>
+
+        <div style="font-size: 9.5px; color: #813B44; font-weight: 600;">
+          TikTok: @arsyi_1907 &nbsp;•&nbsp; Instagram: _purtiayu &nbsp;•&nbsp; WhatsApp: +62 882-2546-0100
+        </div>
+      </div>
+
+      <div class="cover-photo-wrapper">
+        <div class="cover-photo-frame">
+          <img src="putri-profile.jpg" alt="Putri Ayu Kusuma Dewi">
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Stats -->
+    <div class="metrics-4">
+      <div class="stat-tile">
+        <div class="stat-val">3.5K+</div>
+        <div class="stat-name">Total Followers</div>
+        <div class="stat-sub">TikTok & Instagram</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-val">2.5K+</div>
+        <div class="stat-name">Avg. Views / Video</div>
+        <div class="stat-sub">Jangkauan Organik 30 Hari</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-val">5.2%</div>
+        <div class="stat-name">Engagement Rate</div>
+        <div class="stat-sub">13.4K+ Likes Akumulatif</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-val">60+</div>
+        <div class="stat-name">Brand Partners</div>
+        <div class="stat-sub">Kampanye Terverifikasi</div>
+      </div>
+    </div>
+
+    <!-- 3 Pillars -->
+    <div class="pillars-3">
+      <div class="pillar-card">
+        <div class="pillar-title">Kepatuhan SLA & Timeline</div>
+        <div class="pillar-desc">Draft video diserahkan H-2 sebelum jadwal posting, penayangan tepat waktu sesuai kalender kampanye.</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-title">Presisi Brief & Tone</div>
+        <div class="pillar-desc">Penyampaian USP produk akurat, natural, dan terarah tanpa klaim berlebihan yang merusak reputasi.</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-title">Laporan Metrik H+7</div>
+        <div class="pillar-desc">Rekapitulasi views, saves, reach, dan engagement transparan diserahkan 7 hari pasca tayang.</div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Putri Ayu Kusuma Dewi • Media Kit Resmi</div>
+      <div>Halaman 1 dari 4</div>
+    </div>
+  </div>
+
+  <!-- ================= PAGE 2 ================= -->
+  <div class="page">
+    <div class="top-bar">
+      <div class="top-brand">PUTRI AYU KUSUMA DEWI</div>
+      <div class="top-meta">AUDIENCE & PERFORMANCE</div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-tag">Demografi Terverifikasi</span>
+      <h2 class="section-title">Karakteristik & Sebaran Audiens</h2>
+      <p class="section-sub">Data analitik audiens terpusat pada segmen pengambil keputusan belanja rumah tangga mandiri.</p>
+    </div>
+
+    <div class="audience-row">
+      <!-- Gender Card -->
+      <div class="card-box">
+        <div class="card-box-title">
+          Gender
+          <span>82% Wanita</span>
+        </div>
+        <div style="margin-top: 10px;">
+          <div class="bar-row">
+            <span>Wanita</span>
+            <div class="bar-line-bg"><div class="bar-line-fill" style="width: 82%;"></div></div>
+            <strong>82%</strong>
+          </div>
+          <div class="bar-row">
+            <span>Pria</span>
+            <div class="bar-line-bg"><div class="bar-line-fill" style="width: 18%; background: #E8CCD2;"></div></div>
+            <strong>18%</strong>
+          </div>
+        </div>
+        <p style="font-size: 8.5px; color: #6B555B; margin-top: 10px; line-height: 1.35;">
+          Didominasi wanita yang menjadi pengambil keputusan utama belanja produk perawatan diri dan keluarga.
+        </p>
+      </div>
+
+      <!-- Age Card -->
+      <div class="card-box">
+        <div class="card-box-title">
+          Kelompok Usia
+          <span>48% (25-34)</span>
+        </div>
+        <div>
+          <div class="bar-row">
+            <span>25-34 th</span>
+            <div class="bar-line-bg"><div class="bar-line-fill" style="width: 48%;"></div></div>
+            <strong>48%</strong>
+          </div>
+          <div class="bar-row">
+            <span>18-24 th</span>
+            <div class="bar-line-bg"><div class="bar-line-fill" style="width: 28%; opacity: 0.8;"></div></div>
+            <strong>28%</strong>
+          </div>
+          <div class="bar-row">
+            <span>35-44 th</span>
+            <div class="bar-line-bg"><div class="bar-line-fill" style="width: 18%; opacity: 0.6;"></div></div>
+            <strong>18%</strong>
+          </div>
+          <div class="bar-row">
+            <span>45+ th</span>
+            <div class="bar-line-bg"><div class="bar-line-fill" style="width: 6%; opacity: 0.4;"></div></div>
+            <strong>6%</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Cities -->
+      <div class="card-box">
+        <div class="card-box-title">
+          Sebaran Wilayah
+          <span>Top 5 Kota</span>
+        </div>
+        <div style="font-size: 9px; line-height: 1.6;">
+          <div style="display:flex; justify-content:space-between;"><span>1. Jakarta & Bodetabek</span><strong>24%</strong></div>
+          <div style="display:flex; justify-content:space-between;"><span>2. Surabaya & Sidoarjo</span><strong>18%</strong></div>
+          <div style="display:flex; justify-content:space-between;"><span>3. Semarang & Sekitarnya</span><strong>15%</strong></div>
+          <div style="display:flex; justify-content:space-between;"><span>4. Jepara & Kudus (Lokal)</span><strong>12%</strong></div>
+          <div style="display:flex; justify-content:space-between;"><span>5. Bandung Raya</span><strong>10%</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Studies Section -->
+    <div class="section-header" style="margin-top: 10px;">
+      <span class="section-tag">Bukti Performa Nyata</span>
+      <h2 class="section-title">Studi Kasus Video Pilihan</h2>
+      <p class="section-sub">Eksekusi konten terverifikasi yang menghasilkan angka penayangan dan penyimpanan (saves) tinggi.</p>
+    </div>
+
+    <div class="case-grid">
+      <!-- Case 1 -->
+      <div class="case-item">
+        <div class="case-thumb">
+          <img src="thumbnails/garnier-peeling.jpg" alt="Garnier Peeling Serum">
+          <div class="case-badge">TikTok • Pinned</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <div class="case-brand">Garnier</div>
+            <div class="case-cat">Skincare & Body Care</div>
+            <div class="case-obj">Edukasi peeling serum tanpa dibilas dan tanpa cekat-cekit.</div>
+          </div>
+          <div class="case-res">14.6K Views • 780 Saves</div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-item">
+        <div class="case-thumb">
+          <img src="thumbnails/socks-baby.jpg" alt="Kaos Kaki Bayi">
+          <div class="case-badge">TikTok • Viral</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <div class="case-brand">Motherlove / Baby</div>
+            <div class="case-cat">Ibu & Bayi</div>
+            <div class="case-obj">Rekomendasi kebutuhan bayi musim hujan hangat dan elastis.</div>
+          </div>
+          <div class="case-res">16.7K Views • 1.4K Saves</div>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="case-item">
+        <div class="case-thumb">
+          <img src="thumbnails/toy-baby.jpg" alt="Mainan Edukasi">
+          <div class="case-badge">TikTok • Edukasi</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <div class="case-brand">Edukasi Bayi</div>
+            <div class="case-cat">Ibu & Bayi</div>
+            <div class="case-obj">Review mainan sensorik interaktif untuk motorik anak balita.</div>
+          </div>
+          <div class="case-res">3.9K Views • 240 Saves</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Putri Ayu Kusuma Dewi • Media Kit Resmi</div>
+      <div>Halaman 2 dari 4</div>
+    </div>
+  </div>
+
+  <!-- ================= PAGE 3 ================= -->
+  <div class="page">
+    <div class="top-bar">
+      <div class="top-brand">PUTRI AYU KUSUMA DEWI</div>
+      <div class="top-meta">PACKAGES & DELIVERABLES</div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-tag">Kerjasama Kampanye</span>
+      <h2 class="section-title">Pilihan Paket & Hak Penggunaan Iklan</h2>
+      <p class="section-sub">Struktur pengerjaan fleksibel disesuaikan dengan objektif awareness, edukasi, maupun konversi.</p>
+    </div>
+
+    <!-- 3 Packages -->
+    <div class="packages-row">
+      <div class="pkg-card">
+        <div>
+          <div class="pkg-target">Uji Pasar / SKU Baru</div>
+          <div class="pkg-title">Starter Awareness</div>
+          <div class="pkg-desc">Pilihan tepat untuk memperkenalkan produk baru dan menguji respon audiens.</div>
+          <ul class="pkg-items">
+            <li>1x Video Vertikal (TikTok / Reels, 9:16, 1080p)</li>
+            <li>3x Instagram Story berangkai + Link Stiker</li>
+            <li>1x Sesi revisi minor (konsep/skrip)</li>
+            <li>Laporan analitik performa H+7</li>
+          </ul>
+        </div>
+        <div class="rate-btn">Minta Rate Card Resmi</div>
+      </div>
+
+      <div class="pkg-card popular">
+        <div class="pop-badge">Paling Populer</div>
+        <div>
+          <div class="pkg-target">Consideration & Edukasi</div>
+          <div class="pkg-title">Growth & Edukasi</div>
+          <div class="pkg-desc">Paket terlaris untuk membangun kepercayaan mendalam melalui repetisi pesan.</div>
+          <ul class="pkg-items">
+            <li>3x Video Vertikal (TikTok & Reels, angle berbeda)</li>
+            <li>6x Instagram Story interaktif (Q&A/Polling)</li>
+            <li>Pinned Comment link pembelian selama 30 hari</li>
+            <li>2x Sesi revisi draft materi</li>
+            <li>Laporan metrik lengkap H+7 (Views, Saves, ER)</li>
+          </ul>
+        </div>
+        <div class="rate-btn">Minta Rate Card Resmi</div>
+      </div>
+
+      <div class="pkg-card">
+        <div>
+          <div class="pkg-target">Kuartalan / Ambassador</div>
+          <div class="pkg-title">Long-term Retainer</div>
+          <div class="pkg-desc">Kemitraan eksklusif sebagai representasi autentik brand pada kategori terkait.</div>
+          <ul class="pkg-items">
+            <li>4x Video Vertikal + 8x Stories terjadwal per bulan</li>
+            <li>3 Bulan hak guna iklan (Paid Ads / Whitelisting)</li>
+            <li>Eksklusivitas kompetitor langsung selama periode</li>
+            <li>Slot jadwal produksi prioritas</li>
+            <li>Laporan rekapitulasi performa bulanan</li>
+          </ul>
+        </div>
+        <div class="rate-btn">Minta Rate Card Resmi</div>
+      </div>
+    </div>
+
+    <!-- Add-Ons -->
+    <div style="font-size: 11px; font-weight: 700; color: #3B2A2E; margin-bottom: 8px;">
+      Layanan Tambahan (Add-On Periklanan & Produksi)
+    </div>
+    <div class="addons-grid">
+      <div class="addon-box">
+        <div class="addon-name">Digital Ads Rights</div>
+        <div class="addon-desc">Lisensi hak penayangan iklan Meta Ads & TikTok Ads (30/60/90 hari).</div>
+      </div>
+      <div class="addon-box">
+        <div class="addon-name">TikTok Spark Ads</div>
+        <div class="addon-desc">Kode otorisasi postingan langsung dari akun kreator untuk efisiensi CPC.</div>
+      </div>
+      <div class="addon-box">
+        <div class="addon-name">Raw Footage 4K</div>
+        <div class="addon-desc">Seluruh klip video mentah tanpa editing untuk kebutuhan bank aset brand.</div>
+      </div>
+      <div class="addon-box">
+        <div class="addon-name">Fast Track (&lt; 48 Jam)</div>
+        <div class="addon-desc">Produksi kilat untuk kebutuhan mendesak, flash sale, atau tanggal kembar.</div>
+      </div>
+    </div>
+
+    <!-- Official Brand Partners Logos -->
+    <div style="font-size: 11px; font-weight: 700; color: #3B2A2E; margin-bottom: 8px;">
+      Brand yang Pernah Bekerja Sama (Terkonfirmasi)
+    </div>
+    <div class="logos-grid">
+      <div class="logo-cell"><img src="logos/garnier.svg" alt="Garnier"></div>
+      <div class="logo-cell"><img src="logos/vaseline.svg" alt="Vaseline"></div>
+      <div class="logo-cell"><img src="logos/sidomuncul.svg" alt="Sido Muncul"></div>
+      <div class="logo-cell"><img src="logos/hanasui.png" alt="Hanasui"></div>
+      <div class="logo-cell"><img src="logos/motherlove.png" alt="Motherlove"></div>
+      <div class="logo-cell"><img src="logos/you.png" alt="Y.O.U"></div>
+      <div class="logo-cell"><img src="logos/reglow.png" alt="Reglow"></div>
+      <div class="logo-cell"><img src="logos/blackmores.svg" alt="Blackmores"></div>
+      <div class="logo-cell"><img src="logos/salsa.png" alt="Salsa"></div>
+      <div class="logo-cell"><img src="logos/cedea.png" alt="Cedea"></div>
+      <div class="logo-cell"><img src="logos/pln.svg" alt="PLN"></div>
+      <div class="logo-cell"><img src="logos/yayle.svg" alt="Yayle"></div>
+    </div>
+
+    <div class="page-footer">
+      <div>Putri Ayu Kusuma Dewi • Media Kit Resmi</div>
+      <div>Halaman 3 dari 4</div>
+    </div>
+  </div>
+
+  <!-- ================= PAGE 4 ================= -->
+  <div class="page">
+    <div class="top-bar">
+      <div class="top-brand">PUTRI AYU KUSUMA DEWI</div>
+      <div class="top-meta">WORKFLOW & BOOKING</div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-tag">Standar Operasional Prosedur</span>
+      <h2 class="section-title">Alur Kerja Terstruktur & Tepat Waktu</h2>
+      <p class="section-sub">Milestone pengerjaan transparan yang menjamin kualitas materi dan kepatuhan timeline.</p>
+    </div>
+
+    <!-- 5 Steps -->
+    <div class="sop-grid">
+      <div class="sop-card">
+        <div class="sop-step">Step 01</div>
+        <div class="sop-name">Brief & Diskusi</div>
+        <div class="sop-time">Hari ke-1</div>
+        <div class="sop-desc">Penyelarasan tujuan kampanye, mandatory USP produk, dan referensi visual.</div>
+      </div>
+      <div class="sop-card">
+        <div class="sop-step">Step 02</div>
+        <div class="sop-name">Konsep & Kontrak</div>
+        <div class="sop-time">Hari ke-2</div>
+        <div class="sop-desc">Penyusunan outline skrip, MoU administrasi, dan kesepakatan timeline rilis.</div>
+      </div>
+      <div class="sop-card">
+        <div class="sop-step">Step 03</div>
+        <div class="sop-name">Produksi & Draft</div>
+        <div class="sop-time">Hari ke 3-5</div>
+        <div class="sop-desc">Penerimaan sampel di Jepara, shooting profesional, dan penyerahan video preview.</div>
+      </div>
+      <div class="sop-card">
+        <div class="sop-step">Step 04</div>
+        <div class="sop-name">Revisi (Maks 2x)</div>
+        <div class="sop-time">Hari ke-6</div>
+        <div class="sop-desc">Penyesuaian minor materi sesuai arahan brief brand sebelum approval final.</div>
+      </div>
+      <div class="sop-card">
+        <div class="sop-step">Step 05</div>
+        <div class="sop-name">Tayang & Laporan</div>
+        <div class="sop-time">Hari ke-7+</div>
+        <div class="sop-desc">Penayangan prime time audiens dan rekapitulasi performa metrik transparan.</div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="section-header">
+      <span class="section-tag">Feedback Partner</span>
+      <h2 class="section-title">Testimoni Brand & Agensi</h2>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">
+          &ldquo;Brief dipahami cepat, eksekusi visual rapi, dan draft selalu diserahkan tepat waktu tanpa perlu follow-up berulang.&rdquo;
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="testimonials/client-dina.jpg" alt="Dina Pratiwi"></div>
+          <div>
+            <div class="testi-name">Dina Pratiwi</div>
+            <div class="testi-role">Brand Marketing Lead • Skincare</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">
+          &ldquo;Penyampaian hangat dan natural. Engagement tinggi karena audiens ibu muda memang percaya dengan rekomendasinya.&rdquo;
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="testimonials/client-siti.jpg" alt="Siti Rahmawati"></div>
+          <div>
+            <div class="testi-name">Siti Rahmawati</div>
+            <div class="testi-role">Campaign Specialist • Baby Care</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">
+          &ldquo;Latar belakang akuntansi tercermin dari administrasi dan laporan metrik pasca-tayang yang sangat rapi dan transparan.&rdquo;
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="testimonials/client-bima.jpg" alt="Bima Satria"></div>
+          <div>
+            <div class="testi-name">Bima Satria</div>
+            <div class="testi-role">Media Planner Lead • Digital Agency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Booking Bar -->
+    <div class="contact-cta-box">
+      <div class="cta-left">
+        <h3>Mulai Kolaborasi Sekarang</h3>
+        <p>Konsultasikan kebutuhan kampanye atau minta penawaran rate card resmi.</p>
+      </div>
+      <div class="cta-right">
+        <div>WhatsApp: <strong>+62 882-2546-0100</strong></div>
+        <div>Email: <strong>cantikputrio58@gmail.com</strong></div>
+        <div>Domisili: <strong>Jepara, Jawa Tengah (Siap kirim sampel)</strong></div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Putri Ayu Kusuma Dewi • Media Kit Resmi</div>
+      <div>Halaman 4 dari 4</div>
+    </div>
+  </div>
+
+</body>
+</html>
